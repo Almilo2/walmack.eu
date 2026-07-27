@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Walmack OÜ | Global Trade Solutions</title>
+    <meta
+      name="description"
+      content="WALMACK OÜ provides end-to-end international trade support, logistics, customs, financing, and market entry services."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="translations.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-bar">
+        <a class="logo-link" href="#home">
+          <img src="download.svg" alt="Walmack" class="logo-img" />
+        </a>
+        <nav class="nav-links">
+          <a href="#about" data-i18n="about">About us</a>
+          <a href="#services" data-i18n="services">Services</a>
+          <a href="#network" data-i18n="network">Network</a>
+          <a href="#contact" data-i18n="contact">Contact</a>
+          <div class="language-switcher">
+            <button class="lang-btn active" data-lang="en" onclick="setLanguage('en')">ENG</button>
+            <button class="lang-btn" data-lang="ru" onclick="setLanguage('ru')">РУС</button>
+            <button class="lang-btn" data-lang="et" onclick="setLanguage('et')">EST</button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="container hero-content">
+          <div class="hero-text">
+            <p class="eyebrow" data-i18n="internationalTrade">International trade solutions</p>
+            <h1 data-i18n="walmack">WALMACK OÜ</h1>
+            <p class="lead" data-i18n="heroLead">
+              Competition in a modern business environment requires continuous
+              improvement of competitive advantage.
+            </p>
+            <p data-i18n="heroText">
+              WALMACK OÜ is constantly working to expand international trade
+              opportunities for suppliers that are interested in increasing their
+              business on the global market.
+            </p>
+            <a class="button" href="#contact" data-i18n="getInTouch">Get in touch</a>
+          </div>
+        </div>
+        <div class="container hero-card-container">
+          <div class="hero-card">
+            <h2 data-i18n="trustedPartner">Trusted partner for global commerce</h2>
+            <ul>
+              <li data-i18n="managingImportExport">Managing import and export</li>
+              <li data-i18n="logisticsTransport">Logistics and transport coordination</li>
+              <li data-i18n="warehousingClearance">Warehousing and customs clearance</li>
+              <li data-i18n="financingAssurance">Payment assurance and financing</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="container two-column">
+          <div style="position: relative; z-index: 1;">
+            <p class="eyebrow" data-i18n="aboutUs">About us</p>
+            <h2 data-i18n="welcomeWalmack">Welcome to WALMACK OÜ</h2>
+            <p data-i18n="aboutText1">
+              Your trusted partner for end-to-end solutions in global trade. As
+              specialists in export and import operations, our group of companies
+              is committed to simplifying the complexities of international
+              commerce.
+            </p>
+            <p data-i18n="aboutText2">
+              We work with importers in target countries, helping them navigate
+              the overwhelming selection of products and materials, verify
+              suppliers, manage compliance, and facilitate export-import
+              procedures without leaving their country.
+            </p>
+          </div>
+          <div class="panel" style="position: relative; z-index: 1;">
+            <h3 data-i18n="coreCompetencies">Our core competencies</h3>
+            <ul>
+              <li data-i18n="competency1">Identifying reliable suppliers across Europe and Asia</li>
+              <li data-i18n="competency2">Skilled negotiation of sale and delivery terms</li>
+              <li data-i18n="competency3">Secure financial transactions and payment assurance</li>
+              <li data-i18n="competency4">Supply chain optimization and transport management</li>
+              <li data-i18n="competency5">Customs support and trade barrier resolution</li>
+            </ul>
+          </div>
+          <img src="transport_picture.png" alt="" class="section-accent-img small" style="top: 10%; right: 5%; opacity: 0.08;" />
+          <img src="shipping_picture.png" alt="" class="section-accent-img medium" style="bottom: 15%; left: -50px; opacity: 0.06;" />
+        </div>
+      </section>
+
+      <section id="services" class="section alt-bg">
+        <div class="container">
+          <p class="eyebrow" data-i18n="servicesTitle">Services</p>
+          <h2 data-i18n="comprehensiveMarket">Comprehensive market assistance</h2>
+          <p class="section-intro" data-i18n="servicesText">
+            WALMACK OÜ goes beyond conventional trade services. We provide market
+            entry strategies, thorough market research, and immediate access to
+            marketing resources to help exporters enter new markets faster.
+          </p>
+          <div class="card-grid">
+            <article class="card">
+              <h3 data-i18n="importExportMgmt">Import & export management</h3>
+              <p data-i18n="importExportDesc">End-to-end support for buying and selling across international markets.</p>
+            </article>
+            <article class="card">
+              <h3 data-i18n="logisticsMgmt">Logistics & transport</h3>
+              <p data-i18n="logisticsDesc">Reliable coordination of shipment, delivery, and transportation planning.</p>
+            </article>
+            <article class="card">
+              <h3 data-i18n="warehousingMgmt">Warehousing & clearance</h3>
+              <p data-i18n="warehousingDesc">Support with customs documentation, warehousing, and smooth border handling.</p>
+            </article>
+            <article class="card">
+              <h3 data-i18n="financingMgmt">Financing & assurance</h3>
+              <p data-i18n="financingDesc">Secure commercial support for financial flow and payment protection.</p>
+            </article>
+          </div>
+          <img src="car_picture.png" alt="" class="section-accent-img medium" style="top: 60%; right: -60px; opacity: 0.09;" />
+          <img src="transport_picture.png" alt="" class="section-accent-img small" style="bottom: 100px; left: 10%; opacity: 0.07;" />
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <p class="eyebrow" data-i18n="gallery">Gallery</p>
+          <h2 data-i18n="ourOperations">Our operations and services</h2>
+          <div class="gallery-grid">
+            <div class="gallery-item">
+              <img src="transport_picture.png" alt="Transport services" />
+              <p data-i18n="transportLogistics">Transport & Logistics</p>
+            </div>
+            <div class="gallery-item">
+              <img src="shipping_picture.png" alt="Shipping operations" />
+              <p data-i18n="shippingOperations">Shipping Operations</p>
+            </div>
+            <div class="gallery-item">
+              <img src="car_picture.png" alt="Fleet management" />
+              <p data-i18n="fleetManagement">Fleet Management</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt-bg">
+        <div class="container">
+          <p class="eyebrow" data-i18n="recognition">Recognition</p>
+          <h2 data-i18n="walmackCertification">WALMACK certification</h2>
+          <div class="certificate-box">
+            <img src="Walmack_certificate-963x1024.jpg" alt="WALMACK Certificate" class="certificate-img" />
+          </div>
+        </div>
+      </section>
+
+      <section id="network" class="section alt-bg">
+        <div class="container">
+          <p class="eyebrow" data-i18n="network">Network</p>
+          <h2 data-i18n="globalReach">Global reach and local expertise</h2>
+          <div class="two-column">
+            <div>
+              <h3 data-i18n="portOperations">Port operations</h3>
+              <p data-i18n="portOperationsText">
+                Our partners, located in the ports of Tallinn and Sillamäe, facilitate the loading and unloading of sea containers, general cargo, and ro-ro vehicles. We also offer shipping services to customers following the Sea-Road scheme (Customs Transit).
+              </p>
+            </div>
+            <div class="panel">
+              <h3 data-i18n="tradingRegions">Trading regions</h3>
+              <ul style="margin: 0; padding-left: 1.1rem;">
+                <li><strong data-i18n="eu">European Union</strong>: <span data-i18n="euCountries">Czech Republic, Poland, Italy, Belgium, Holland</span></li>
+                <li><strong data-i18n="southAmerica">South America</strong>: <span data-i18n="southAmericaCountries">Ecuador</span></li>
+                <li><strong data-i18n="asia">Asia</strong>: <span data-i18n="asiaCountries">China</span></li>
+                <li><strong data-i18n="middleEast">Middle East</strong>: <span data-i18n="middleEastCountries">UAE, Saudi Arabia, Israel</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="container contact-box">
+          <div>
+            <p class="eyebrow" data-i18n="contactTitle">Contact</p>
+            <h2 data-i18n="getInTouchTeam">Get in touch with our team</h2>
+            <p data-i18n="contactText">
+              Success in international trade requires more than transactions. It
+              demands a deep understanding of trade potential, regulations, and
+              export strategy. WALMACK OÜ is your essential partner for a seamless
+              and successful foray into the global marketplace.
+            </p>
+          </div>
+          <div class="contact-details">
+            <p>
+              <strong data-i18n="headOffice">Head Office</strong><br />
+              Juhkentali str. 9-3<br />
+              Narva, 20308<br />
+              Estonia
+            </p>
+            <p style="margin-top: 1rem;">
+              <strong data-i18n="tel">Tel</strong>: +372 566 605 23
+            </p>
+            <p>
+              <strong data-i18n="email">Email</strong>: info@walmack.eu
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
