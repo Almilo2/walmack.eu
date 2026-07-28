@@ -19,6 +19,21 @@
     <script src="translations.js"></script>
   </head>
   <body>
+    <div class="welcome-screen" id="welcomeScreen" aria-hidden="true">
+      <div class="welcome-card">
+        <div class="welcome-lang-switcher" id="welcomeLangSwitcher">
+          <button class="lang-btn active" data-lang="en" onclick="setLanguage('en')">ENG</button>
+          <button class="lang-btn" data-lang="ru" onclick="setLanguage('ru')">РУС</button>
+          <button class="lang-btn" data-lang="et" onclick="setLanguage('et')">EST</button>
+        </div>
+        <p class="eyebrow" data-i18n="welcomeEyebrow">Welcome</p>
+        <h2 data-i18n="welcomeTitle">Welcome to WALMACK OÜ</h2>
+        <p data-i18n="welcomeText">We help businesses connect with reliable partners across Europe and beyond.</p>
+        <p class="welcome-subtext" data-i18n="welcomeSubtext">International trade solutions with global reach and local expertise.</p>
+        <button class="welcome-btn" id="welcomeEnterBtn" data-i18n="welcomeButton">Enter website</button>
+      </div>
+    </div>
+
     <header class="site-header">
       <div class="container nav-bar">
         <a class="logo-link" href="#home">
@@ -211,9 +226,6 @@
               Narva, 20308<br />
               Estonia
             </p>
-            <p style="margin-top: 1rem;">
-              <strong data-i18n="tel">Tel</strong>: +372 566 605 23
-            </p>
             <p>
               <strong data-i18n="email">Email</strong>: info@walmack.eu
             </p>
@@ -227,7 +239,11 @@
       document.addEventListener('DOMContentLoaded', function() {
         const menuToggle = document.getElementById('menuToggle');
         const navMenu = document.getElementById('navMenu');
-        
+        const welcomeScreen = document.getElementById('welcomeScreen');
+        const welcomeBtn = document.getElementById('welcomeEnterBtn');
+        const welcomeLangSwitcher = document.getElementById('welcomeLangSwitcher');
+        const hasSeenWelcome = localStorage.getItem('walmackWelcomeSeen');
+
         if (menuToggle && navMenu) {
           menuToggle.addEventListener('click', function() {
             navMenu.classList.toggle('active');
@@ -241,6 +257,47 @@
               navMenu.classList.remove('active');
               menuToggle.classList.remove('active');
             });
+          });
+        }
+
+        if (welcomeScreen && welcomeBtn) {
+          if (!hasSeenWelcome) {
+            welcomeScreen.classList.add('active');
+            document.body.classList.add('welcome-open');
+            welcomeScreen.setAttribute('aria-hidden', 'false');
+          } else {
+            welcomeScreen.classList.remove('active');
+            welcomeScreen.setAttribute('aria-hidden', 'true');
+          }
+
+          const closeWelcome = () => {
+            welcomeScreen.classList.remove('active');
+            document.body.classList.remove('welcome-open');
+            welcomeScreen.setAttribute('aria-hidden', 'true');
+            localStorage.setItem('walmackWelcomeSeen', 'true');
+          };
+
+          welcomeBtn.addEventListener('click', closeWelcome);
+
+          if (welcomeLangSwitcher) {
+            welcomeLangSwitcher.querySelectorAll('.lang-btn').forEach(button => {
+              button.addEventListener('click', function() {
+                welcomeLangSwitcher.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+              });
+            });
+          }
+
+          welcomeScreen.addEventListener('click', function(event) {
+            if (event.target === welcomeScreen) {
+              closeWelcome();
+            }
+          });
+
+          document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && welcomeScreen.classList.contains('active')) {
+              closeWelcome();
+            }
           });
         }
       });

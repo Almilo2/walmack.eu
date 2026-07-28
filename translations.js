@@ -5,6 +5,11 @@ const translations = {
     services: 'Services',
     network: 'Network',
     contact: 'Contact',
+    welcomeEyebrow: 'Welcome',
+    welcomeTitle: 'Welcome to WALMACK OÜ',
+    welcomeText: 'We help businesses connect with reliable partners across Europe and beyond.',
+    welcomeSubtext: 'International trade solutions with global reach and local expertise.',
+    welcomeButton: 'Enter website',
 
     // Hero
     internationalTrade: 'International trade solutions',
@@ -78,6 +83,11 @@ const translations = {
     services: 'Услуги',
     network: 'Сеть',
     contact: 'Контакты',
+    welcomeEyebrow: 'Добро пожаловать',
+    welcomeTitle: 'Добро пожаловать в WALMACK OÜ',
+    welcomeText: 'Мы помогаем компаниям находить надежных партнеров в Европе и за ее пределами.',
+    welcomeSubtext: 'Решения для международной торговли с глобальным охватом и локальной экспертизой.',
+    welcomeButton: 'Открыть сайт',
 
     // Hero
     internationalTrade: 'Решения международной торговли',
@@ -151,6 +161,11 @@ const translations = {
     services: 'Teenused',
     network: 'Võrgustik',
     contact: 'Kontakt',
+    welcomeEyebrow: 'Tere tulemast',
+    welcomeTitle: 'Tere tulemast WALMACK OÜ-sse',
+    welcomeText: 'Aitame ettevõtetel leida usaldusväärseid partnereid Euroopas ja kaugemal.',
+    welcomeSubtext: 'Rahvusvahelise kaubanduse lahendused ülemaailmse ulatusega ja kohaliku ekspertidega.',
+    welcomeButton: 'Ava veebisait',
 
     // Hero
     internationalTrade: 'Rahvusvahelise kaubanduse lahendused',
